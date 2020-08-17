@@ -1,0 +1,23 @@
+	* Variables: Una variable es un espacio que creamos en el sistema de almacenaje, 
+    está compuesto por el nombre de la variable y el valor de su contenido.
+    Para crear la variable colocamos la palabra var que inidca que crearemos un espacio en el almacenaje, 
+    luego dejamos un espacio, colocamos el nombre que queremos darle a la variable 
+    (a esto se le llama declarar una variable), y por ultimo colocamos un signo "=", 
+     este signo indicará cual es el valor de la variable, osea su contenido. 
+     El contenido de la variable puede variar al modificar el contenido mientras que el espacio creado 
+     en el almacenamiento sigue siendo siempre el mismo independientemente de las modificaciones que sufra su contenido.
+	
+    * Strings: 
+	* Funciones (argumentos, `return`):
+	* Declaraciones `if`:
+	* Valores booleanos (`true`, `false`):
+Una variable es una forma de almacenar el valor de algo para usar más tarde. 
+(Una nota para aquellos con conocimientos previos de programación: Javascript
+ es un lenguaje de tipado dinámico, una variable se puede configurar
+  (y restablecer) a cualquier tipo, no necesitamos declarar su tipo 
+  al iniciar la variable).
+
+Para crear una variable en JavaScript utilizamos la palabra clave `var`,
+ seguida de un espacio y el nombre de la variable (con este nombre podremos 
+ hacer referencia a ella luego). Además de declarar una variable, podemos
+  asignarle un valor usando el signo `=`.
