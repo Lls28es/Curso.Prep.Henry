@@ -3,21 +3,128 @@
     Para crear la variable colocamos la palabra var que inidca que crearemos un espacio en el almacenaje, 
     luego dejamos un espacio, colocamos el nombre que queremos darle a la variable 
     (a esto se le llama declarar una variable), y por ultimo colocamos un signo "=", 
-     este signo indicará cual es el valor de la variable, osea su contenido. 
-     El contenido de la variable puede variar al modificar el contenido mientras que el espacio creado 
-     en el almacenamiento sigue siendo siempre el mismo independientemente de las modificaciones que sufra su contenido.
+    este signo indicará cual es el valor de la variable, osea su contenido. 
+    El contenido de la variable puede variar al modificar el contenido mientras que el espacio creado 
+    en el almacenamiento sigue siendo siempre el mismo independientemente de las modificaciones que sufra su contenido.
 	
-    * Strings: 
-	* Funciones (argumentos, `return`):
-	* Declaraciones `if`:
-	* Valores booleanos (`true`, `false`):
-Una variable es una forma de almacenar el valor de algo para usar más tarde. 
-(Una nota para aquellos con conocimientos previos de programación: Javascript
- es un lenguaje de tipado dinámico, una variable se puede configurar
-  (y restablecer) a cualquier tipo, no necesitamos declarar su tipo 
-  al iniciar la variable).
+  * Strings: es una cadena formada por secuencia de caracteres (numeros, letras, simbolos, espacios u otros elementos), 
+   string se definien entre comillas y se utiliza para almacenar y procesar textos para luego poder ser utilizados a 
+   conveniencia.
+      
+	* Funciones (argumentos, `return`): son tipos de objetos denominados objetos invocables. La idea de una funcion 
+   es poder repetir una misma tarea apartir de los datos proporcionados y los conjunto de órdenes y sentencias que debe 
+   ejecutar la función. Estas funciones pueden llamarse a conveniencia evitando asi tener que escribir el mimo codigo
+   en varios lugares reduciendo así el tiempod e codificación.
+  
+   Para crear una funcion se coloca la palabra clave "function" que indica que lo que se creará será una funcion y 
+   que debe ser tratada como tal por el programa, luego se coloca el nombre de la funcion, debe ser corta e indicar 
+   cual es su trabajo, a continuacion y entre parentesis se indican el o los argumentos, osea los datos con los que trabajará,
+   por último y entre corchetes se escribe el codigo a ejecutar (los conjuntos de ordenes y sentencias que debe ejecutar la funcion).
+  
+     function nombredelafuncion (argumentos) {codigo a ejecutar}
 
-Para crear una variable en JavaScript utilizamos la palabra clave `var`,
- seguida de un espacio y el nombre de la variable (con este nombre podremos 
- hacer referencia a ella luego). Además de declarar una variable, podemos
-  asignarle un valor usando el signo `=`.
+    - argumentos:
+
+       Reemplazo del argumento:
+
+       function Saludar (nombre) {
+          console.log ('Hola, ' + nombre); // esta linea indica las ordenes y sentencias.
+       }
+       Saludar ('Javier');                  //en esta linea indicaremos cual será el valor del argumento.
+
+     
+      Uso de variables en el argumento:
+
+         function Saludar (nombre) {
+           console.log( `Hola, ${nombre}`);
+         }
+         var Persona = 'Javier';      //en esta linea declaramos una variable, su nombre y su valor.
+         Saludar(Persona);           // en esta linea usamos la variable anterior para reemplazar el el valor del argumento por dicha variable.
+
+        De esta manera al llamar la funcion será remplazada por el valor "miNombre" utilizando logHola(miNombre), 
+        y ésta será reemplazada por el valor "Antonio" de la variable var miNombre = 'Antonio'
+
+
+      Uso de varios argumentos en la funcion:
+
+         function sumarDNumeros (a, b) {
+           var suma = a + b;      // en esta linea el valor de la variable esta compuesta por los argumentos y una opereacion que debe realizarce
+           return suma;           // en esta linea "return" nos permite que el mismo programa realice la operacion y nos de el resultado. 
+          }
+          sumaDeNumeros(4, 8);  // estos seran los valores de cada argumento de la funcion
+      
+        En este caso los argumentos seran "a" y "b" separando ambos argumentos por una coma. En la ultima linea, 
+        al igual que la funsion, indicaremos el valor de cada argumento separando cada valor con una coma,
+        el primer valor reemplazara al primer argumento de la función y el segundo valor al segundo elemento.
+        Entonces a=4 y b=8
+
+    - "return": 
+     
+     "Console.log()" es una funcion que se utiliza para imprimir informacion en la consola, 
+     mientras que  "return" indica que debe ser devuelto el valor de una operación.
+     
+     Hay que tener en cuenta que no se puede obtener el resultado de la operacion de la funcion fuera de dicha funcion
+     debido a que no tenemos acceso a las declaraciones dentro de la funcion
+     por lo que si colocamos console.log(resultado); en el siguiente ejemplo el resultado no será 
+     el valor de la operacion de dividir a por b.
+
+       function dividirNumeros(a, b) {
+         var resultado = a / b;
+         return resultado;
+        }
+       dividirNumeros(10, 5);   
+       console.log(resultado);    // intento de obtener el resultado de la operacion poir fuera de la función, esto nos dará "undefined".
+
+      Para poder obtener el resultado de la operación por fuera de la funcion es necesario declarar una variable por fuera de la funcion
+      e indicar que el valor de la variable sera el valor de los argumentos de la funcion y luego pedir la impresion del resultado
+      por medio de la funsion console.log(resultado)
+
+       function dividirNumeros(a, b) {
+         var resultado = a / b;
+         return resultado;
+        }
+          
+       var productoDeDosN = dividirNumeros(10, 5);  //la 
+       console.log(productoDeDosN); // 2
+       console.log(resultado); // undefined
+     
+
+	* Declaraciones `if`: los operadores de comparación son utilizados para comprobar si se cumplen, o no, determinadas condiciones
+  si se cumple una o todas condiciones el programa ejecutará las instrucciones en la declaración if
+  si no se cumple la o las condicones el programa ejecutará la instruccion en else, o bien si no colocamos una declaración else
+  se devolverá lo que indiquemos fuera de los corchetes.
+  Ejemplo
+
+   function mayorDeEdad(edad) {                
+    if (edad >= 18) {                         // if es la declaración de cumplimiento de la o las condiciones, el contenido de los parentesis () es o son las condiciones.
+     console.log ("Es mayor de edad");     // dentro de los corchetes {} están la o las instrucciones a ejecutar si se cumple la o las condiciones.
+    }
+
+    return false;                             // es el valor que se devuelve si no se cumple con la o las condiciones.
+    }
+   
+   En este ejemplo  aplicams la declaración else en el mismo ejemplo
+
+   function mayorDeEdad(edad) {                
+    if (edad >= 18) {                         
+     console.log ("Es mayor de edad");     
+    } else {                                   // else es la declaración de Incumplimiento de una o todas las condiciones,
+      console.log ("Es menor de edad")         // dentro de los corchetes {} están la o las instrucciones a ejecutar si NO se cumple la o las condiciones.
+    }     
+   }
+
+	* Valores booleanos (`true`, `false`): Los datos lógios o booleanos son constantes que nos permiten indicar si una o varias condiciones
+  se cumplen o no, "true" si se cumple/n, "false" si no se cumple/n. Se suelen utilizar en funciones junto con operadores lógios, declaraciones, etc.
+   
+   function mayorDeEdad(edad) {
+    if (edad >= 18) {
+     return true;
+    }
+
+    return false;
+   }
+
+   mayorDeEdad(27) // true
+  
+
+
