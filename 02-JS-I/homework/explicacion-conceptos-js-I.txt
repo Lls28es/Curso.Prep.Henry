@@ -1,4 +1,7 @@
-	* Variables: Una variable es un espacio que creamos en el sistema de almacenaje, 
+Explicacion conceptos JS-
+
+
+  * Variables: Una variable es un espacio que creamos en el sistema de almacenaje, 
     está compuesto por el nombre de la variable y el valor de su contenido.
     Para crear la variable colocamos la palabra var que inidca que crearemos un espacio en el almacenaje, 
     luego dejamos un espacio, colocamos el nombre que queremos darle a la variable 
