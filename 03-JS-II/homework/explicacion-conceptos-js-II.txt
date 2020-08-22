@@ -1,0 +1,90 @@
+Explicación conceptos JS-II
+
+
+* `for`:
+
+     for es un tipo de bulce utilizado para evaluar expresiones una y otra vez cambiando los datos 
+     de las expresiones hasta cumplir con el requisito de finalizacion del bucle.
+     la sintaxis del bucle for esta compuesta por varias parte:
+
+         for ( 1ra declaracion; 2da declaracion; 3ra declaracion) {
+              codigo a ejecutar en cada repeticion del bucle
+         }
+
+     Ejemplo: 
+         for ( i = 0; i = 8; i = i + 2) {
+             console.log (i)
+         }
+     
+     Al comeinzo la palabra clave "for", 
+     seguido por tres declaraciones dentro de un parentesis
+     y separadas entre ellas por un punto y coma:
+
+     - Primera declaracion: la variable, su nombre y su valor, éste valor será el inicial.
+     - Segunda declaracion: condicionales, nos permiten indicar cuando finalizara la repetición del bucle.
+     - Tercer declaración: incremento del valor. Éste incremento se aplicará al valor de la variable 
+
+     A continuacion del parentecis contenedor de las declaraciones se coloca llaves de comienzo y
+     cierre donde se colocará el o los codigos a ejecutar cada vez que se repite el bucle.
+
+     El bucle comienza con el valor indicado en la 1ra declaración, luego reviza si la condicion 
+     de la 2da declaracion se cumple, a continuación incrementa el valor de la variable 
+     de la manera indicada en la 3ra declaracion y crea un nuevo valor, terminado ésto 
+     si la condicion de finalizacion no se cumple ejecuta el codigo colocado entre llaves.
+     El nuevo valor remplaza el valor de la variable y comienza el ciclo de nuevo, revisará si se cumple la condicon
+     de finalización del bucle, incrementará el nuevo valor y luego, si no se ha cumplido 
+     la condicion de finalizacion, ejecutará el codigo, si se ha cumplido dicha coindicion no ejecutará el codigo 
+     y el bulce finalizará.
+
+
+* `&&`, `||`, `!` :
+
+
+  function nombredelafuncion (valor) {
+     if (1er grupo de condiciones) {
+         codigo a ejecutar del 1er grupo de cond
+         } else (2do grupo de condiciones) {
+      codigo a ejecutar del 2do grupo de cond
+    }     
+   }
+
+ '&&' (AND = y) es el operador logico que permite indicar TODAS las condiciones que DEBEN cumplirse
+ para ejecucion uno o varios codigos. 
+     
+ Si la primera condicion es falsa entonces el resto de las condiciones en el argumento no seran leidas 
+ y continuara con las siguientes instrucciones. 
+
+ Si la primera condicion se cumple lee la siguiente, en cuanto se encuentra una condicion falsa
+ dejará de leer las siguientes condiciones y por ende no ejecutara los codigos asociados a las condiciones.
+ si todas las condiciones se cumplen ejecutara los codigos correspondientes.
+
+ Para indicar las distintas condiciones debemos colocar el operador && entre ellas y encerrar las condiciones
+ entre parentesis.
+
+     function nombreDeLaFuncion (valor) {
+       if ( 1 <= 1 && 3 < 2) {
+         codigo a ejecutar del 1er grupo de condiciones     //Este codigo no se ejecutará porque la condicion 3 < 2 es falsa, pasará a la siguiente instrucción
+       } else (1 <= 1 && 2 < 3) {            
+          codigo a ejecutar del 2do grupo de condiciones    //Este codigo si se ejecutará porque ambas condiciones son verdaderas
+       }     
+     }
+
+ * '||' (OR = ó) es el operador logico que nos permite indicar que Almenos una de las condiciones DEBE cumplirse 
+ para ejecutar determinado. Si la primera condicion encontrada es verdadera 
+ no se leeran las siguientes condiciones, pues con que una sea verdadera es suficiente para ejecutar el o los codigos indicados.
+ Si la primera condicion no es verdadera seguira con las demas condiciones hasta encontrar una condicion verdadera, 
+ si no encuentra ninguna no ejecutará el codigo asociado a las condiciones.
+
+     function nombreDeLaFuncion (valor) {
+       if ( 1 == 2 || 3 < 2) {
+         codigo a ejecutar del 1er grupo de condiciones    //Este codigo no se ejecutará porque ninguna de las condiciones se cumple
+       } else (1 == 1 && 3 < 2) {            
+          codigo a ejecutar del 2do grupo de condiciones   //Este codigo si se ejecutará porque una de las condiciones se cumple
+       }     
+     }
+ 
+ '!' (NOT = no) es el operador que nos permite negar algo, por ejemplo (1 != 2) 
+ indica que 1 no es igual a 2. (1 !== "1") el numero 1 no es identico al string "1".
+ Incluso podemos negar toda una expresíon !(1 === 1) es falso que: 1 es identico a 1.
+
+
