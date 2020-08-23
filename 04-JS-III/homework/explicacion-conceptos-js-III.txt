@@ -1,0 +1,38 @@
+1. En un archivo de texto separado que debes crear, 
+escribe explicaciones de los siguientes conceptos como si se
+ lo estuvieras explicando a un niño de 12 años. Hacer esto te ayudará a descubrir
+  rápidamente cualquier agujero en tu comprensión.
+
+	* Arrays
+
+    ## Introducción a los arrays (matrices/arreglos)
+
+En la lección anterior discutimos los 3 tipos de datos básicos 
+(cadenas/strings, números y booleanos) y cómo asignar esos tipos 
+de datos a las variables. Discutimos cómo una variable solo puede 
+apuntar a una sola cadena, número o booleano. Sin embargo, 
+en muchos casos queremos poder apuntar a una colección de tipos de datos.
+ Por ejemplo, ¿qué pasaría si quisiéramos hacer un seguimiento del nombre
+  de cada estudiante en esta clase usando una sola variable, `nombresEstudiantes`.
+   Podemos hacer eso usando Arrays. Podemos pensar en las matrices como contenedores
+    de almacenamiento para colecciones de datos. Construir una matriz es simple, 
+    declarar una variable y establecerla en []. Luego podemos agregar al contenedor 
+    (separadas por coma) tantas cadenas, números o booleanos como queramos 
+    y acceder a esos elementos cuando lo deseemos.
+
+```javascript
+const nombresEstudiantes = ['Martin', 'Antonio', 'Sara', 'Samuel'];
+```
+
+### .length
+
+Al igual que el tipo de dato _String_ tiene un método incorporado 
+`.length`, también lo hace la matriz. De hecho, la matriz tiene muchos 
+métodos incorporados útiles (los discutiremos en lecciones posteriores). 
+Al igual que la cadena `.length` cuenta los caracteres, la matriz` .length` 
+devolverá el número de elementos en una matriz:
+
+```javascript
+const nombresEstudiantes = ['Martin', 'Antonio', 'Sara', 'Samuel'];
+
+console.log(nombresEstudiantes.length);  // 4
