@@ -82,7 +82,7 @@ function promedioResultadosTest(resultadosTest) {
   // "resultadosTest" debe ser una matriz de enteros (int/integers)
   // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
   // Tu código:
-  var promedio = 0
+  var promedio = 0;
   var sumaResultados = 0;
   for (i = 0; i < resultadosTest.length; i++){
     sumaResultados = resultadosTest [i]+ sumaResultados;
@@ -112,7 +112,7 @@ function multiplicarArgumentos() {
   if (arguments.length < 1){
     return 0;
   }
-  var resultado = 1
+  var resultado = 1;
   for (var i = 0; i < arguments.length; i++ ){
     resultado = resultado * arguments [i];
   }
